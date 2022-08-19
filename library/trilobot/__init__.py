@@ -147,7 +147,7 @@ class Trilobot():
     def __del__(self):
         """ Clean up GPIO and underlighting when the class is deleted.
         """
-        sn3218.disable()
+        sn3218._get_sn3218().disable()
         GPIO.cleanup()
 
     ###########
